@@ -114,8 +114,8 @@ function client(socket) {
       if (isReturningPartner) {
         let now = Math.floor(Date.now() / 1000);
         let timeSinceLastChat = (now - partnersMap[partner.id].lastChatTimestamp);
-        // if timeSinceLastChat > 5 minutes
-        return (timeSinceLastChat > 300);
+        // if timeSinceLastChat > 10 seconds
+        return (timeSinceLastChat > 10);
       } return true;
     } return false;
   }
